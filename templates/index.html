@@ -1,19 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name = "viewpoint" content="width=device-width,initial-scale=1.0">
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-<form action="{{url_for('Summarize')}}" method="post">
-    <textarea name="data" cols="30" rows="10" placeholder="Enter your Data"></textarea>
-    <input type="range" min="20" max="100" value="50" name="maxL" class="slider" id="myRange">
-
-    <button type="submit">Submit</button>
-</form>
-<h3>Summarized Text:</h3>
-<textarea rows = "10" cols="30" name="result">{{result}}</textarea>
-</body>
+  </head>
+  <body>
+    <div class="main">
+      <h1 class="primary-heading">Text Summarization</h1>
+      <div class="text">
+        Text summarization has become one of the most important yet challenging
+        tasks in Natural Language Processing (NLP). The resurgence of deep
+        learning has greatly advanced this field by neural generation models.
+        Our project focuses on generating News Headlines when provided with a
+        news article. The aim of this is to condense a document while the
+        condensed content retains the core meaning of the original document. The
+        text summarization method consists of extractive summarization and
+        abstractive summarization. Headline generation is an abstractive
+        summarization subtask. To generate headlines that compress the
+        information in a longer text or a shorter text, we need to train a large
+        news dataset either by building a model from scratch or using a
+        pre-trained model.
+      </div>
+      <div class="flex">
+        <div class="div-one">
+          <div class="section-one">
+            <textarea
+              name="data"
+              cols="30"
+              rows="10"
+              placeholder="Enter your Data"
+            ></textarea>
+          </div>
+        </div>
+        <div class="div-two">
+          <div class="section-one">
+            <input
+              type="range"
+              min="20"
+              max="100"
+              value="50"
+              name="maxL"
+              class="slider"
+              id="myRange"
+            />
+          </div>
+          <div class="section-two">
+            <form action="{{url_for('Summarize')}}" method="post">
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+        <div class="div-three">
+          <textarea
+            rows="10"
+            cols="30"
+            name="result"
+            placeholder="results will arrive here"
+          >
+{{result}}
+</textarea
+          >
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
