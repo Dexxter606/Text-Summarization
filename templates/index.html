@@ -27,6 +27,8 @@
       <div class="flex">
         <div class="div-one">
           <div class="section-one">
+            <form action="{{url_for('Summarize')}}" method="post">
+
             <textarea
               name="data"
               cols="30"
@@ -48,7 +50,6 @@
             />
           </div>
           <div class="section-two">
-            <form action="{{url_for('Summarize')}}" method="post">
               <button type="submit">Submit</button>
             </form>
           </div>

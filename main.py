@@ -22,6 +22,7 @@ def Summarize():
             return response.json()
 
         data = req.form['data']
+        print(data)
 
         minL = 20
         maxL = int(req.form["maxL"])
