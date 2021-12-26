@@ -6,6 +6,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Document</title>
   </head>
   <body>
@@ -29,26 +30,24 @@
         <div class="div-one">
           <div class="section-one">
             <form action="{{url_for('Summarize')}}" method="post">
-
+           
             <textarea
               name="data"
               cols="30"
               rows="10"
               placeholder="Enter your Data"
+              id="textarea"
             ></textarea>
           </div>
         </div>
         <div class="div-two">
           <div class="section-one">
-            <input
-              type="range"
-              min="20"
-              max="100"
-              value="50"
-              name="maxL"
-              class="slider"
-              id="myRange"
-            />
+            <select multiple="multiple" class="options">
+              <option id="option1" value="After much wait, the first UDAN flight took off from Shimla today after being flagged off by Prime Minister Narendra Modi.The flight will be operated by Alliance Air, the regional arm of Air India. PM Narendra Modi handed over boarding passes to some of passengers travelling via the first UDAN flight at the Shimla airport.Tomorrow PM @narendramodi will flag off the first UDAN flight under the Regional Connectivity Scheme, on Shimla-Delhi sector.Air India yesterday opened bookings for the first l">Article 1</option>
+              <option id="option2" value="Union minister Vijay Goel today batted for the unification of the three municipal corporations in the national capital saying a discussion over the issue was pertinent. The BJP leader, who was confident of a good show by his party in the MCD polls, the results of which will be declared tomorrow, said the civic bodies needed to be revamped in order to deliver the services to the people more effectively. The first thing needed was a discussion on the unification of the three municipal corporation">Article 2</option>
+          </select>
+          <button id="test">Select</button>
+
           </div>
           <div class="section-two">
               <button type="submit">Submit</button>
@@ -68,5 +67,6 @@
         </div>
       </div>
     </div>
+    <script src="{{url_for('static', filename='styles/script.js')}}"></script>
   </body>
 </html>

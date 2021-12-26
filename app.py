@@ -22,10 +22,10 @@ def Summarize():
             return response.json()
 
         data = req.form['data']
-        print(data)
+        # print(data)
 
         minL = 20
-        maxL = int(req.form["maxL"])
+        maxL = 70
         output = query({
             "inputs": data,
             "parameters": {"min_length": minL, "max_length": maxL}
